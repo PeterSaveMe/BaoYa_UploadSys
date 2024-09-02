@@ -1,0 +1,44 @@
+﻿<Window x:Class="BaoYa_UploadSystem.Views.ImportDataAppView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+         Title="启动程序" Height="250" Width="400" WindowStartupLocation="CenterScreen"
+        Background="#f0f0f0" WindowStyle="None" AllowsTransparency="True">
+    <Border CornerRadius="20" Background="White" BorderBrush="#dddddd" BorderThickness="1">
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+
+            <Button Click="Close"
+                Content="X" Background="Red" HorizontalAlignment="Right" />
+            <!-- 路径输入 -->
+            <TextBlock Name="PathTextBox" Grid.Row="1" Height="35" Margin="0,0,0,10"
+                     Text="选择导入数据程序路径" FontSize="16" />
+
+            <TextBox Name="PathBox" Grid.Row="2" Height="35" Margin="0,0,0,10"
+                     VerticalAlignment="Center"
+  materialDesign:HintAssist.Hint="导入数据程序路径"
+  Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                     IsReadOnly="True"
+            FontSize="16" />
+            <!-- 浏览按钮 -->
+            <Button Content="浏览..." Grid.Row="3" Height="35" Width="100" Margin="0,0,0,10"
+                    HorizontalAlignment="Right" VerticalAlignment="Center"
+                    Background="#007ACC" Foreground="White" FontSize="14"
+                    BorderThickness="0"  Click="BrowseButton_Click" />
+
+            <!-- 启动按钮 -->
+            <Button Content="启动程序" Grid.Row="4" Height="40" Width="150" HorizontalAlignment="Center"
+                    VerticalAlignment="Center" Background="#007ACC" Foreground="White"
+                    FontSize="16" BorderThickness="0"  Click="StartProgramButton_Click" />
+        </Grid>
+    </Border>
+</Window>
